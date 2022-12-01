@@ -2,7 +2,6 @@
 
 * {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bolder;
 }
 
 h1 {
@@ -43,9 +42,7 @@ footer {
 body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    align-self: center;
 }
 
 .url {
@@ -58,63 +55,66 @@ body {
     display: flex;
     flex-direction: column;
     background-color: black;
-    width: 400px;
-    height: 480px;
+    width: 375px;
+    height: 555px;
     text-align: center;
     border-radius: 5px;
-    padding-top: 15px;
+    font-size: 35px;
+    padding-top: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-bottom: 2px;
+    border: 10px solid gray;
 }
 
 .pantalla {
     display: flex;
     flex-direction: row;
-    align-self: center;
-    width: 300px;
-    height: 35px;
+    width: 370px;
+    height: 90px;
+    margin-bottom: 5px;
     background-color: white;
-    margin: 20px;
-    padding: 20px;
     text-align: right;
     border-radius: 5px;
     background-color: beige;
+    align-self: center;
+}
+
+.filazero {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
 }
 
 .primerafila {
     display: flex;
     flex-direction: row;
     align-self: center;
-    align-items: center;
 }
 
 .segundafila {
     display: flex;
     flex-direction: row;
     align-self: center;
-    align-items: center;
 }
 
 .tercerafila {
     display: flex;
     flex-direction: row;
     align-self: center;
-    align-items: center;
 }
 
 .cuartafila {
     display: flex;
     flex-direction: row;
     align-self: center;
-    align-items: center;
 }
 
 .botoniguales {
-    width: 50px;
-    height: 45px;
-    margin: 10px;
-    padding: 10px;
-    background-color: white;
+    width: 90px;
+    height: 90px;
+    margin: 2px;
     border-color: gray;
-    border: 2rem;
     border-radius: 5px;
 }
 
@@ -128,7 +128,7 @@ body {
 #ocho,
 #nueve,
 #zero {
-    background-color: gray
+    background-color: darkcyan;
 }
 
 #division,
@@ -138,4 +138,14 @@ body {
 #igual,
 #decimales {
     background-color: orange;
+}
+
+#ac,
+#masmenos,
+#porciento {
+    background-color: lightblue;
+}
+
+#zero {
+    width: 185px;
 }
