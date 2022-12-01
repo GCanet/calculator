@@ -118,24 +118,24 @@ body {
     border-radius: 5px;
 }
 
-.uno,
-.dos,
-.tres,
-.cuatro,
-.cinco,
-.seis,
-.siete,
-.ocho,
-.nueve,
-.zero {
+#uno,
+#dos,
+#tres,
+#cuatro,
+#cinco,
+#seis,
+#siete,
+#ocho,
+#nueve,
+#zero {
     background-color: gray
 }
 
-.division,
-.multi,
-.sumar,
-.restar,
-.igual,
-.decimales {
+#division,
+#multi,
+#sumar,
+#restar,
+#igual,
+#decimales {
     background-color: orange;
 }
