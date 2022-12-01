@@ -1,19 +1,31 @@
-// 16x16 grid
-// hover effect so grid divs change color leaving trail thru grid
-// prompt asking squares for new grid, from 16x16 to 100x100 > always inside same size
-//
-// document.getElementById(`class`).innerHTML = variable;
+// add, substract, multiply, divide
 
-let container = document.querySelector(`.container`);
+function add(a, b) {
 
-container.forEach((div) => {
-  div.addEventListener('click', () => {
-    // code
-  });
-});
+}
 
-container.forEach((div) => {
-  div.addEventListener('hoover', () => {
-    // code
-  });
-});
+function substract(a, b) {
+  
+}
+
+function multiply(a, b) {
+  
+}
+
+function divide(a, b) {
+  
+}
+
+// operate (takes operator and 2 numbers and calls function above)
+
+function operate (a, b) {
+
+}
+
+// storing display value
+
+function screenvalue() {
+  
+}
+
+// buttons listeners
