@@ -5,43 +5,62 @@ let restar = document.getElementById(`restar`).addEventListener(`click`, substra
 let multi = document.getElementById(`multi`).addEventListener(`click`, multiply);
 let divid = document.getElementById(`division`).addEventListener(`click`, divide);
 let igual = document.getElementById(`igual`).addEventListener(`click`, operate);
+let numerosbtn = document.querySelectorAll(".botoniguales");
+let pantallaUNO = document.getElementById('spanscreen');
 
-let uno = document.getElementById(`uno`).addEventListener(`click`, );
-let dos = document.getElementById(`dos`).addEventListener(`click`, );
-let tres = document.getElementById(`tres`).addEventListener(`click`, );
-let cuatro = document.getElementById(`cuatro`).addEventListener(`click`, );
-let cinco = document.getElementById(`cinco`).addEventListener(`click`, );
-let seis = document.getElementById(`seis`).addEventListener(`click`, );
-let siete = document.getElementById(`siete`).addEventListener(`click`, );
-let ocho = document.getElementById(`ocho`).addEventListener(`click`, );
-let nueve = document.getElementById(`nueve`).addEventListener(`click`, );
+// pantalla
 
-// add, substract, multiply, divide
+pantallaUNO.innerHTML = "0";
+
+numerosbtn.forEach((num) => {
+    num.addEventListener("click", actnumeros);
+});
+
+function actnumeros(e) {
+    let numVal; // Store the value of the number
+        if (e.type === "click") {
+          numVal = e.target.innerHTML;
+          pantallaUNO.innerHTML = numVal;
+        } else {
+          return;
+        }
+}
+
+/* crear 2 pantallas virtuales para poder operar entre ellas
+
+pasar a numero el innerhtml de las pantallas para computar:
+
+function compute () {
+    let num1 = parseFloat(pantallaUNO.innerHTML);
+    let num2 = parseFloat(pantallaDOS.innerHTML);
+} */
+
+// add, substract, multiply, divide <-- editar para que opere pantalla 1 vs pantalla 2
 
 function add(a, b) {
-    document.getElementsByClassName('pantalla').innerHTML = "";
+    result = a + b;
+    document.getElementsByClassName('pantalla').innerHTML = result;
 }
 
 function substract(a, b) {
-    document.getElementsByClassName('pantalla').innerHTML = "";
+    result = a - b;
+    document.getElementsByClassName('pantalla').innerHTML = result;
 }
 
 function multiply(a, b) {
-    document.getElementsByClassName('pantalla').innerHTML = "";
+    result = a * b;
+    document.getElementsByClassName('pantalla').innerHTML = result;
 }
 
 function divide(a, b) {
-    document.getElementsByClassName('pantalla').innerHTML = "";
+    result = a / b;
+    document.getElementsByClassName('pantalla').innerHTML = result;
 }
 
 // operate (takes operator and 2 numbers and calls function above)
 
 function operate (a, b) {
-    document.getElementsByClassName('pantalla').innerHTML = "";
+    
 }
 
-// storing display value
-
-function screenvalue() {
-    document.getElementsByClassName('pantalla').innerHTML = "";
-}
+// botones de borrar
