@@ -131,6 +131,46 @@ body {
     background-color: darkcyan;
 }
 
+#zero:hover {
+    background-color: cyan;
+}
+
+#uno:hover {
+    background-color: cyan;
+}
+
+#dos:hover {
+    background-color: cyan;
+}
+
+#tres:hover {
+    background-color: cyan;
+}
+
+#cuatro:hover {
+    background-color: cyan;
+}
+
+#cinco:hover {
+    background-color: cyan;
+}
+
+#seis:hover {
+    background-color: cyan;
+}
+
+#siete:hover {
+    background-color: cyan;
+}
+
+#ocho:hover {
+    background-color: cyan;
+}
+
+#nueve:hover {
+    background-color: cyan;
+}
+
 #division,
 #multi,
 #sumar,
@@ -140,12 +180,54 @@ body {
     background-color: orange;
 }
 
+#division:hover {
+    background-color: darkorange;
+}
+
+#multi:hover {
+    background-color: darkorange;
+}
+
+#sumar:hover {
+    background-color: darkorange;
+}
+
+#restar:hover {
+    background-color: darkorange;
+}
+
+#igual:hover {
+    background-color: darkorange;
+}
+
+#decimales:hover {
+    background-color: darkorange;
+}
+
 #ac,
 #masmenos,
 #porciento {
     background-color: lightblue;
 }
 
+#ac:hover {
+    background-color: darkblue;
+}
+
+#masmenos:hover {
+    background-color: darkblue;
+}
+
+#porciento:hover {
+    background-color: darkblue;
+}
+
 #zero {
     width: 185px;
+}
+
+.botoniguales:active {
+    background-color: cyan;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
