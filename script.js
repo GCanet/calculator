@@ -48,6 +48,50 @@ function divide(number1, number2){
   return number1 / number2;
 }
 
+function operatorUsed(operatorButtonPressed){
+  if (number1 != ""){
+    if (number2 == ""){
+      switch(operatorButtonPressed){
+        case "+":
+          operator = "+";
+          break;
+        case "-":
+          operator = "-";
+          break;
+        case "*":
+          operator = "*";
+          break;
+        case "/":
+          operator = "/";
+          break;
+      }
+      operatorClicked = true;
+      pantallaTop.textContent = number1 + " " + operator + " " + number2;
+    }
+    if (number2 != ""){
+      switch(operatorButtonPressed){
+        case "+":
+          operator = "+";
+          break;
+        case "-":
+          operator = "-";
+          break;
+        case "*":
+          operator = "*";
+          break;
+        case "/":
+          operator = "/";
+          break;
+      }
+      number1 = number3;
+      number3 = "";
+      number2 = "";
+      pantallaTop.textContent = number1 + " " + operator + " " + number2;
+      pantallaBottom.textContent = "";        
+    }
+  }
+} 
+
 function operate(){
   switch(operator){
     case "+":
