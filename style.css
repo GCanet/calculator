@@ -215,7 +215,7 @@ body {
 
 #ce,
 #masmenos,
-#c {
+#cc {
     background-color: lightblue;
 }
 
@@ -227,7 +227,7 @@ body {
     background-color: darkblue;
 }
 
-#c:hover {
+#cc:hover {
     background-color: darkblue;
 }
 

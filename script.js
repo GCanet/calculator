@@ -1,52 +1,41 @@
+// dom events
+
+document.getElementById("ce").addEventListener(`click`, ce);
+document.getElementById("cc").addEventListener("click", ce);
+document.getElementById(`sumar`).addEventListener("click", buttonAddClicked);
+document.getElementById(`restar`).addEventListener("click", buttonSubtractClicked);
+document.getElementById(`multi`).addEventListener("click", buttonMultiplyClicked);
+document.getElementById(`division`).addEventListener("click", buttonDivideClicked);
+document.getElementById(`igual`).addEventListener("click", buttonEqualsClicked);
+document.getElementById("masmenos").addEventListener("click", buttonNegativeClicked);
+document.getElementById("decimales").addEventListener("click", buttonPointClicked);
+document.getElementById("uno").addEventListener("click", button1Clicked);
+document.getElementById("dos").addEventListener("click", button2Clicked);
+document.getElementById("tres").addEventListener("click", button3Clicked);
+document.getElementById("cuatro").addEventListener("click", button4Clicked);
+document.getElementById("cinco").addEventListener("click", button5Clicked);
+document.getElementById("seis").addEventListener("click", button6Clicked);
+document.getElementById("siete").addEventListener("click", button7Clicked);
+document.getElementById("ocho").addEventListener("click", button8Clicked);
+document.getElementById("nueve").addEventListener("click", button9Clicked);
+document.getElementById("zero").addEventListener("click", button0Clicked);
+
 // variables
 
-let AC = document.getElementById("ce").addEventListener(`click`, ce);
-let C = document.getElementById("c").addEventListener("click", ce);
-let masmenos = document.getElementById("masmenos").addEventListener("click", buttonNegativeClicked);
-let sumar = document.getElementById(`sumar`).addEventListener("click", buttonAddClicked);
-let restar = document.getElementById(`restar`).addEventListener("click", buttonSubtractClicked);
-let multi = document.getElementById(`multi`).addEventListener("click", buttonMultiplyClicked);
-let divid = document.getElementById(`division`).addEventListener("click", buttonDivideClicked);
-let igual = document.getElementById(`igual`).addEventListener("click", buttonEqualsClicked);
-let buttonPoint = document.getElementById("decimales").addEventListener("click", buttonPointClicked);
-let button1 = document.getElementById("uno").addEventListener("click", button1Clicked);
-let button2 = document.getElementById("dos").addEventListener("click", button2Clicked);
-let button3 = document.getElementById("tres").addEventListener("click", button3Clicked);
-let button4 = document.getElementById("cuatro").addEventListener("click", button4Clicked);
-let button5 = document.getElementById("cinco").addEventListener("click", button5Clicked);
-let button6 = document.getElementById("seis").addEventListener("click", button6Clicked);
-let button7 = document.getElementById("siete").addEventListener("click", button7Clicked);
-let button8 = document.getElementById("ocho").addEventListener("click", button8Clicked);
-let button9 = document.getElementById("nueve").addEventListener("click", button9Clicked);
-let button0 = document.getElementById("zero").addEventListener("click", button0Clicked);
+let operatorClicked = false;
+let number1 = "";
+let number2 = "";
+let number3 = "";
+let operator;
+
+// pantalla "" al inicio
+
 let pantallaTop = document.getElementById("pantallaTop");
 let pantallaBottom = document.getElementById("pantallaBottom");
 pantallaTop.textContent = "";
 pantallaBottom.textContent = "";
-let defaultBottomNumber = 0;
-let number1 = "";
-let number2 = "";
-let number3 = "";
-let operatorClicked = false;
-let operator;
 
 // operaciones
-
-function add(number1, number2){
-  return number1 + number2;
-}
-
-function substract(number1, number2){
-  return number1 - number2;
-}
-
-function multiply(number1, number2){
-  return number1 * number2;
-}
-
-function divide(number1, number2){
-  return number1 / number2;
-}
 
 function operatorUsed(operatorButtonPressed){
   if (number1 != ""){
@@ -54,40 +43,53 @@ function operatorUsed(operatorButtonPressed){
       switch(operatorButtonPressed){
         case "+":
           operator = "+";
-          break;
+          operatorClicked = true;
+          pantallaTop.textContent = number1 + " " + operator;
+          pantallaBottom.textContent = "";
+          break;  
         case "-":
           operator = "-";
-          break;
+          operatorClicked = true;
+          pantallaTop.textContent = number1 + " " + operator;
+          pantallaBottom.textContent = "";
+          break;  
         case "*":
           operator = "*";
-          break;
+          operatorClicked = true;
+          pantallaTop.textContent = number1 + " " + operator;
+          pantallaBottom.textContent = "";
+          break;  
         case "/":
           operator = "/";
-          break;
+          operatorClicked = true;
+          pantallaTop.textContent = number1 + " " + operator;
+          pantallaBottom.textContent = "";
+          break;  
       }
-      operatorClicked = true;
-      pantallaTop.textContent = number1 + " " + operator + " " + number2;
     }
     if (number2 != ""){
       switch(operatorButtonPressed){
         case "+":
           operator = "+";
-          break;
+          pantallaTop.textContent = number1 + " " + operator + " " + number2;
+          pantallaBottom.textContent = "";
+          break;    
         case "-":
           operator = "-";
-          break;
+          pantallaTop.textContent = number1 + " " + operator + " " + number2;
+          pantallaBottom.textContent = "";
+          break;      
         case "*":
           operator = "*";
-          break;
+          pantallaTop.textContent = number1 + " " + operator + " " + number2;
+          pantallaBottom.textContent = "";
+          break;      
         case "/":
           operator = "/";
-          break;
+          pantallaTop.textContent = number1 + " " + operator + " " + number2;
+          pantallaBottom.textContent = "";
+          break;      
       }
-      number1 = number3;
-      number3 = "";
-      number2 = "";
-      pantallaTop.textContent = number1 + " " + operator + " " + number2;
-      pantallaBottom.textContent = "";        
     }
   }
 } 
@@ -96,31 +98,44 @@ function operate(){
   switch(operator){
     case "+":
       number3 = add(number1, number2);
-      number3 = Math.round(number3*100)/100;
+      pantallaTop.textContent = number1 + " " + operator + " " + number2 + " " + "=";
+      pantallaBottom.textContent = " " + number3;
       break;
     case "-":
       number3 = subtract(number1, number2);
-      number3 = Math.round(number3*100)/100;
+      pantallaTop.textContent = number1 + " " + operator + " " + number2 + " " + "=";
+      pantallaBottom.textContent = " " + number3;
       break;
     case "*":
       number3 = multiply(number1, number2);
-      number3 = Math.round(number3*100)/100;
+      pantallaTop.textContent = number1 + " " + operator + " " + number2 + " " + "=";
+      pantallaBottom.textContent = " " + number3;
       break;
     case "/":
       number3 = divide(number1, number2);
-      number3 = Math.round(number3*100)/100;
+      pantallaTop.textContent = number1 + " " + operator + " " + number2 + " " + "=";
+      pantallaBottom.textContent = " " + number3;
       break;
   }
-  pantallaTop.textContent = number1 + " " + operator + " " + number2 + " =";
-  pantallaBottom.textContent = number3;
 }
 
 // botones
 
-function button1Clicked(){     
+function button0Clicked(){
   if (operatorClicked == false && number1.length <= 8){
-    number1 += 1;        
-    pantallaBottom.textContent = number1;
+    number1 += 0;        
+    pantallaBottom.textContent = number1;            
+  }
+  else if (operatorClicked == true && number2.length <= 8){
+    number2 += 0;        
+    pantallaBottom.textContent = number2;            
+  }
+}
+
+function button1Clicked(){
+  if (operatorClicked == false && number1.length <= 8){
+    number1 += 1;
+    pantallaBottom.textContent = number1;        
   }
   else if (operatorClicked == true && number2.length <= 8){
     number2 += 1;        
@@ -128,7 +143,7 @@ function button1Clicked(){
   }
 }
 
-function button2Clicked(){      
+function button2Clicked(){
   if (operatorClicked == false && number1.length <= 8){
     number1 += 2;        
     pantallaBottom.textContent = number1;
@@ -150,7 +165,7 @@ function button3Clicked(){
   }
 }
 
-function button4Clicked(){     
+function button4Clicked(){
   if (operatorClicked == false && number1.length <= 8){
     number1 += 4;        
     pantallaBottom.textContent = number1;            
@@ -194,7 +209,7 @@ function button7Clicked(){
   }
 }
 
-function button8Clicked(){   
+function button8Clicked(){
   if (operatorClicked == false && number1.length <= 8){
     number1 += 8;        
     pantallaBottom.textContent = number1;            
@@ -212,17 +227,6 @@ function button9Clicked(){
   }
   else if (operatorClicked == true && number2.length <= 8){
     number2 += 9;        
-    pantallaBottom.textContent = number2;            
-  }
-}
-
-function button0Clicked(){     
-  if (operatorClicked == false && number1.length <= 8){
-    number1 += 0;        
-    pantallaBottom.textContent = number1;            
-  }
-  else if (operatorClicked == true && number2.length <= 8){
-    number2 += 0;        
     pantallaBottom.textContent = number2;            
   }
 }
@@ -245,15 +249,15 @@ function buttonDivideClicked(){
 
 function buttonEqualsClicked(){
   if(number2 == 0 && operator == "/"){
-    pantallaTop.textContent = "Dividir por 0?";
-    pantallaBottom.textContent = "Pillin ;)";
+    pantallaTop.textContent = "error";
+    pantallaBottom.textContent = "";
     number1 = "";
     number2 = ""
     number3 = "";
     operatorClicked = false;
   }
   else if(number2 != ""){
-    operate()       
+    operate();       
   }
 }
 
@@ -297,10 +301,28 @@ function buttonNegativeClicked(){
 }
 
 function ce(){
-  pantallaTop.textContent = "";
-  pantallaBottom.textContent = "";
-  let number1 = "";
-  let number2 = "";
-  let number3 = "";
+  let number1 = 0;
+  let number2 = 0;
+  let number3 = 0;
   let operatorClicked = false;
+  pantallaTop.textContent = "";
+  pantallaBottom.textContent = ""; 
+}
+
+function add(number1, number2){
+  let suma = parseFloat(number1) + parseFloat(number2);
+    return suma
+}
+
+function subtract(number1, number2){
+  let resta = number1 - number2;
+    return resta
+}
+
+function multiply(number1, number2){
+  return number1 * number2;
+}
+
+function divide(number1, number2){
+  return number1 / number2;
 }
