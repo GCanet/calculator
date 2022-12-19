@@ -1,13 +1,17 @@
-// dom events
+// arreglar bug que se lleva el numero anterior despues de borrar
+// arreglar el borrado, convertir en 1 boton y sin bugs
 
 document.getElementById("ce").addEventListener(`click`, ce);
 document.getElementById("cc").addEventListener("click", ce);
+
+// dom events
+
+document.getElementById("masmenos").addEventListener("click", buttonNegativeClicked);
 document.getElementById(`sumar`).addEventListener("click", buttonAddClicked);
 document.getElementById(`restar`).addEventListener("click", buttonSubtractClicked);
 document.getElementById(`multi`).addEventListener("click", buttonMultiplyClicked);
 document.getElementById(`division`).addEventListener("click", buttonDivideClicked);
 document.getElementById(`igual`).addEventListener("click", buttonEqualsClicked);
-document.getElementById("masmenos").addEventListener("click", buttonNegativeClicked);
 document.getElementById("decimales").addEventListener("click", buttonPointClicked);
 document.getElementById("uno").addEventListener("click", button1Clicked);
 document.getElementById("dos").addEventListener("click", button2Clicked);

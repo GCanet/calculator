@@ -185,7 +185,8 @@ body {
 #sumar,
 #restar,
 #igual,
-#decimales {
+#decimales,
+#masmenos {
     background-color: orange;
 }
 
@@ -213,25 +214,23 @@ body {
     background-color: darkorange;
 }
 
-#ce,
-#masmenos,
-#cc {
+#masmenos:hover {
+    background-color: darkorange;
+}
+
+#ce {
     background-color: lightblue;
 }
 
 #ce:hover {
-    background-color: darkblue;
-}
-
-#masmenos:hover {
-    background-color: darkblue;
-}
-
-#cc:hover {
-    background-color: darkblue;
+    background-color: red;
 }
 
 #zero {
+    width: 185px;
+}
+
+#ce {
     width: 185px;
 }
 
