@@ -67,7 +67,7 @@ body {
     border: 10px solid gray;
 }
 
-.pantalla {
+#containerpantalla {
     display: flex;
     justify-content: flex-end;
     width: 370px;
@@ -111,7 +111,15 @@ body {
     align-self: center;
 }
 
-.botoniguales {
+.numeros {
+    width: 90px;
+    height: 90px;
+    margin: 2px;
+    border-color: gray;
+    border-radius: 5px;
+}
+
+.xxxxxxxxx {
     width: 90px;
     height: 90px;
     margin: 2px;
@@ -205,13 +213,13 @@ body {
     background-color: darkorange;
 }
 
-#ac,
+#ce,
 #masmenos,
-#porciento {
+#c {
     background-color: lightblue;
 }
 
-#ac:hover {
+#ce:hover {
     background-color: darkblue;
 }
 
@@ -219,7 +227,7 @@ body {
     background-color: darkblue;
 }
 
-#porciento:hover {
+#c:hover {
     background-color: darkblue;
 }
 
@@ -227,7 +235,13 @@ body {
     width: 185px;
 }
 
-.botoniguales:active {
+.numeros:active {
+    background-color: cyan;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.xxxxxxxxx:active {
     background-color: cyan;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
