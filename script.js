@@ -1,11 +1,11 @@
-// arreglar bug que se lleva el numero anterior despues de borrar
-// arreglar el borrado, convertir en 1 boton y sin bugs
-
-document.getElementById("ce").addEventListener(`click`, ce);
-document.getElementById("cc").addEventListener("click", ce);
+// arreglar bugs: 
+//
+// se lleva el numero anterior despues de borrar 
+// tiene como una cache que hay que borrar
 
 // dom events
 
+document.getElementById("ce").addEventListener(`click`, ce);
 document.getElementById("masmenos").addEventListener("click", buttonNegativeClicked);
 document.getElementById(`sumar`).addEventListener("click", buttonAddClicked);
 document.getElementById(`restar`).addEventListener("click", buttonSubtractClicked);
@@ -39,7 +39,7 @@ let pantallaBottom = document.getElementById("pantallaBottom");
 pantallaTop.textContent = "";
 pantallaBottom.textContent = "";
 
-// operaciones
+// funciones de operador
 
 function operatorUsed(operatorButtonPressed){
   if (number1 != ""){
@@ -304,6 +304,8 @@ function buttonNegativeClicked(){
   }       
 }
 
+// borrado
+
 function ce(){
   let number1 = 0;
   let number2 = 0;
@@ -312,6 +314,8 @@ function ce(){
   pantallaTop.textContent = "";
   pantallaBottom.textContent = ""; 
 }
+
+// matematicas
 
 function add(number1, number2){
   let suma = parseFloat(number1) + parseFloat(number2);
