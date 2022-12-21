@@ -307,10 +307,10 @@ function buttonNegativeClicked(){
 // borrado
 
 function ce(){
-  let number1 = 0;
-  let number2 = 0;
-  let number3 = 0;
-  let operatorClicked = false;
+  number1 = 0;
+  number2 = "";
+  number3 = "";
+  operatorClicked = false;
   pantallaTop.textContent = "";
   pantallaBottom.textContent = ""; 
 }
