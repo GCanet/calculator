@@ -307,7 +307,7 @@ function buttonNegativeClicked(){
 // borrado
 
 function ce(){
-  number1 = 0;
+  number1 = "";
   number2 = "";
   number3 = "";
   operatorClicked = false;
