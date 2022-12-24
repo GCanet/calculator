@@ -121,6 +121,8 @@ function operate(){
       pantallaBottom.textContent = " " + number3;
       break;
   }
+  number1 = number3;
+  number2 = "";
 }
 
 // botones
