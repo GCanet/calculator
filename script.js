@@ -1,8 +1,3 @@
-// arreglar bugs: 
-//
-// se lleva el numero anterior despues de borrar 
-// tiene como una cache que hay que borrar
-
 // dom events
 
 document.getElementById("ce").addEventListener(`click`, ce);
@@ -31,15 +26,12 @@ let number1 = "";
 let number2 = "";
 let number3 = "";
 let operator;
-
-// pantalla "" al inicio
-
 let pantallaTop = document.getElementById("pantallaTop");
 let pantallaBottom = document.getElementById("pantallaBottom");
 pantallaTop.textContent = "";
 pantallaBottom.textContent = "";
 
-// funciones de operador
+// funciones de teclas de operacion e igual
 
 function operatorUsed(operatorButtonPressed){
   if (number1 != ""){
@@ -306,7 +298,7 @@ function buttonNegativeClicked(){
   }       
 }
 
-// borrado
+// funcion de borrado
 
 function ce(){
   number1 = "";
@@ -317,7 +309,7 @@ function ce(){
   pantallaBottom.textContent = ""; 
 }
 
-// matematicas
+// funciones matematicas
 
 function add(number1, number2){
   let suma = parseFloat(number1) + parseFloat(number2);
